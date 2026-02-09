@@ -1,50 +1,45 @@
 /* ==========================================================================
-   EDITORIAL BRUTALISM — POSTER / GRAPHIC / LOUD
+   MODERN KINETIC — SWISS / PROFESSIONAL / CLEAN
    ========================================================================== */
 
 :root {
-  /* Core Colors - Stark & Graphic */
-  --bg: #050505;
-  /* Deep Void Black */
-  --text: #e0e0e0;
-  /* Off-White for readability */
+  /* Core Colors - Monochrome & Professional */
+  --bg: #080808;
+  /* Soft Black */
+  --text: #f4f4f5;
+  /* High Contrast White */
+  --text-muted: #a1a1aa;
+  /* Muted Grey for meta */
 
-  /* ACID EDITORIAL PALETTE */
-  --accent-green: #ccff00;
-  /* Acid Green - PRIMARY */
-  --accent-purple: #bd00ff;
-  /* Electric Purple - SECONDARY */
-  --accent-gray: #333333;
-  /* Structural Gray */
+  /* Accents - Subtle & purposeful */
+  --accent: #3b82f6;
+  /* Professional Blue */
+  --accent-glow: rgba(59, 130, 246, 0.5);
 
-  --border: #333333;
+  --border: #27272a;
   /* Subtle structural lines */
 
-  /* Typography - POSTER SCALE */
-  --font-main: 'Helvetica', 'Arial', sans-serif;
-  --font-mono: 'Courier New', Courier, monospace;
+  /* Typography - Swiss Style */
+  --font-main: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
 
-  /* Spacing - Graphic Tension */
+  /* Spacing - Airy & Consistent */
   --space-xs: 0.5rem;
-  --space-sm: 1.5rem;
-  --space-md: 4rem;
-  --space-lg: 8rem;
-  --space-xl: 16rem;
+  --space-sm: 2rem;
+  --space-md: 6rem;
+  --space-lg: 12rem;
+  --space-xl: 20rem;
 
   /* Layout */
   --border-width: 1px;
-  /* Thinner for cyber look */
-  --border-style: solid;
 }
 
 [data-theme="light"] {
-  --bg: #f4f4f0;
-  --text: #1a1a1a;
-  --accent-green: #00cccc;
-  /* Cyan for light mode contrast */
-  --accent-purple: #ff00ff;
-  /* Magenta */
-  --border: #e0e0e0;
+  --bg: #ffffff;
+  --text: #18181b;
+  --text-muted: #52525b;
+  --accent: #2563eb;
+  --border: #e4e4e7;
 }
 
 /* ==========================================================================
@@ -56,137 +51,149 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border-radius: 0 !important;
 }
 
 html {
   font-size: 16px;
-  scroll-behavior: auto !important;
+  scroll-behavior: smooth;
   cursor: none;
-  /* Custom cursor everywhere */
+  /* Custom cursor */
 }
 
 body {
   background-color: var(--bg);
   color: var(--text);
   font-family: var(--font-main);
-  line-height: 1;
+  line-height: 1.5;
   overflow-x: hidden;
-  padding: var(--space-sm);
+  padding: 0;
   min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* ==========================================================================
-   TYPOGRAPHY - LOUD & HIERARCHICAL
+   TYPOGRAPHY - CLEAN & KINETIC
    ========================================================================== */
 h1,
 h2,
 h3,
 h4 {
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: -0.04em;
-  line-height: 0.85;
+  font-weight: 600;
+  /* Lighter weight for modern feel */
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0;
 }
 
 p {
-  font-family: var(--font-mono);
-  font-size: 1.1rem;
-  line-height: 1.4;
-  max-width: 50ch;
-  margin-bottom: var(--space-sm);
+  color: var(--text-muted);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  max-width: 60ch;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-  border-bottom: 2px solid currentColor;
+  transition: color 0.2s ease;
 }
 
 /* ==========================================================================
-   LAYOUT UTILITIES - ASYMMETRICAL
+   LAYOUT - STANDARD GRID
    ========================================================================== */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-sm);
+}
+
 .poster-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: var(--space-sm);
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-lg);
   position: relative;
 }
 
-/* Color Blocks for Structure */
-.block-green {
-  background: var(--accent-green);
-  color: #000;
-}
-
-.block-purple {
-  background: var(--accent-purple);
-  color: #fff;
-}
-
-.block-gray {
-  background: var(--accent-gray);
-  color: var(--text);
-}
-
-.block-black {
-  background: #000;
-  color: var(--text);
-}
-
+/* Graphic Line - Minimal */
 .graphic-line {
-  height: var(--border-width);
+  height: 1px;
   background: var(--border);
   width: 100%;
   margin: var(--space-md) 0;
 }
 
 /* ==========================================================================
-   NAV - FLOATING TICKER
+   NAV - PRECISE
    ========================================================================== */
 .nav {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  padding: var(--space-sm) 0;
-  border-bottom: var(--border-width) solid var(--text);
+  align-items: center;
+  /* Center align */
+  padding: 1.5rem var(--space-sm);
+  border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
   background: var(--bg);
+  /* Solid bg for sticky */
   z-index: 1000;
-  mix-blend-mode: normal;
+  backdrop-filter: blur(10px);
+  background: rgba(8, 8, 8, 0.8);
+  /* Glass effect */
+}
+
+[data-theme="light"] .nav {
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .nav-logo {
-  font-size: 2rem;
-  font-weight: 900;
-  border: 3px solid var(--text);
-  padding: 0.2rem 0.5rem;
-  background: var(--accent-orange);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
 }
 
 .nav-links {
   display: flex;
-  gap: var(--space-sm);
+  gap: 3rem;
   list-style: none;
 }
 
 .nav-link {
-  font-family: var(--font-mono);
-  font-weight: bold;
+  font-size: 0.9rem;
   text-transform: uppercase;
-  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  position: relative;
+  opacity: 0.7;
+  transition: opacity 0.2s;
   border: none;
+  /* Remove underline default */
 }
 
 .nav-link:hover {
-  background: var(--text);
-  color: var(--bg);
+  opacity: 1;
+  background: transparent;
+  color: inherit;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background: var(--accent);
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link:hover::after {
+  width: 100%;
 }
 
 /* ==========================================================================
-   HERO - POSTER HEADER
+   HERO - SOPHISTICATED
    ========================================================================== */
 .hero {
   min-height: 90vh;
@@ -195,30 +202,32 @@ a {
   justify-content: center;
   position: relative;
   overflow: hidden;
+  padding: 0 var(--space-sm);
 }
 
 .hero-bg-text-container {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-5deg);
-  width: 200%;
-  /* Wider to hold scrolling text */
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
   display: flex;
-  gap: 2rem;
+  white-space: nowrap;
+  opacity: 0.05;
+  /* Extremely subtle */
   pointer-events: none;
   z-index: 0;
-  opacity: 0.1;
   overflow: hidden;
 }
 
 .hero-bg-text {
-  font-size: 15vw;
-  /* Adjusted for better marquee flow */
-  color: transparent;
-  -webkit-text-stroke: 2px var(--text);
-  white-space: nowrap;
-  animation: marquee 25s linear infinite;
+  font-size: 20vw;
+  font-weight: 800;
+  color: var(--text);
+  -webkit-text-stroke: 0;
+  /* Solid subtle color */
+  animation: marquee 60s linear infinite;
+  /* Very slow */
 }
 
 @keyframes marquee {
@@ -233,198 +242,188 @@ a {
 
 .hero-main {
   z-index: 2;
-  position: relative;
-  mix-blend-mode: difference;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .hero-hi {
+  display: block;
   font-family: var(--font-mono);
-  font-size: 1.5rem;
-  background: var(--text);
-  color: var(--bg);
-  display: inline-block;
-  padding: 0.5rem;
-  margin-bottom: var(--space-sm);
-  transform: rotate(-2deg);
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  background: transparent;
+  padding: 0;
+  transform: none;
 }
 
 .hero-name {
-  font-size: clamp(6rem, 20vw, 25rem);
-  line-height: 0.75;
-  margin-left: -0.5rem;
-  /* Optical alignment */
+  font-size: clamp(4rem, 12vw, 10rem);
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  margin-bottom: 2rem;
+  color: var(--text);
 }
 
 .hero-role {
-  font-size: clamp(2rem, 5vw, 4rem);
-  text-transform: uppercase;
-  color: var(--accent-blue);
-  background: var(--bg);
-  /* Cutout effect */
-  display: inline-block;
-  padding: 0 1rem;
-  margin-top: var(--space-sm);
-  border: 3px solid var(--accent-blue);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  color: var(--text-muted);
+  font-weight: 400;
+  border: none;
+  background: transparent;
+  padding: 0;
+  text-transform: none;
+  display: block;
 }
 
 /* ==========================================================================
-   SECTIONS - EDITORIAL SPREADS
+   SECTIONS - LIST STYLE
    ========================================================================== */
 .section-header {
-  grid-column: 1 / -1;
-  font-size: clamp(3rem, 10vw, 8rem);
-  border-bottom: var(--border-width) solid var(--text);
+  font-size: clamp(2rem, 5vw, 4rem);
   margin-bottom: var(--space-md);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2rem;
+  grid-column: 1 / -1;
 }
 
-/* Projects - Magazine List */
+/* Projects - Clean Rows */
 .project-strip {
   grid-column: 1 / -1;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
-  border-bottom: 2px solid var(--text);
-  padding: var(--space-sm) 0;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  position: relative;
-  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+  padding: 4rem 0;
+  transition: background 0.3s ease;
+  background: transparent;
 }
 
 .project-strip:hover {
-  background: var(--accent-red);
-  color: white;
-  padding-left: var(--space-md);
-  padding-right: var(--space-md);
+  background: transparent;
+  /* No bg change */
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.project-left {
+  display: flex;
+  align-items: baseline;
+  gap: 2rem;
+}
+
+.project-number {
+  font-family: var(--font-mono);
+  color: var(--accent);
+  font-size: 1rem;
 }
 
 .project-strip h3 {
-  font-size: clamp(3rem, 6vw, 6rem);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 500;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s;
+  color: var(--text);
   z-index: 2;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .project-strip:hover h3 {
-  transform: translateX(16px) skewX(-8deg);
-  color: var(--bg);
-  /* Invert on hover for contrast */
+  transform: translateX(20px);
+  opacity: 0.7;
+  color: var(--text);
+  /* Keep color */
+  /* Remove skew for professional look - or keep it very subtle */
 }
 
 .project-meta {
   font-family: var(--font-mono);
-  font-size: 1rem;
-  z-index: 2;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-align: right;
 }
 
+/* Remove giant hover reveal */
 .project-hover-reveal {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: repeating-linear-gradient(45deg,
-      transparent,
-      transparent 10px,
-      rgba(0, 0, 0, 0.1) 10px,
-      rgba(0, 0, 0, 0.1) 20px);
-  opacity: 0;
-  transition: opacity 0.2s;
+  display: none;
 }
 
-.project-strip:hover .project-hover-reveal {
-  opacity: 1;
-}
-
-/* Skills - Tag Cloud */
+/* Skills Grid */
 .skills-block {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
   grid-column: span 12;
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-sm);
 }
 
 .skill-pill {
-  font-size: 2rem;
-  font-weight: bold;
-  padding: 0.5rem 1.5rem;
-  border: 2px solid var(--text);
-  background: var(--bg);
-  transition: transform 0.1s;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  text-align: center;
+  transition: all 0.2s;
 }
 
 .skill-pill:hover {
-  background: var(--accent-purple);
-  color: white;
-  transform: translateY(-5px);
-  box-shadow: 5px 5px 0 var(--accent-green);
-  border-color: var(--accent-green);
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(59, 130, 246, 0.05);
+  /* Subtle tint */
+  transform: translateY(-2px);
+  box-shadow: none;
 }
 
-/* Tool Icons - Raw SVG */
+/* Tool Icons */
 .tool-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-  gap: var(--space-sm);
-  margin-top: var(--space-md);
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
 .tool-icon {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1;
-  border: 1px solid var(--border);
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s;
-  color: var(--text);
-}
-
-.tool-icon svg {
-  width: 32px;
-  height: 32px;
-  fill: currentColor;
+  width: 50px;
+  height: 50px;
+  border: none;
+  padding: 0;
+  color: var(--text-muted);
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .tool-icon:hover {
-  background: var(--accent-green);
-  color: #000;
-  border-color: var(--accent-green);
-  box-shadow: 0 0 15px var(--accent-green);
+  color: var(--accent);
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  transform: translateY(-5px);
 }
 
 /* ==========================================================================
-   INTERACTION - CURSOR & BACKGROUND
+   INTERACTION - CURSOR
    ========================================================================== */
 .cursor {
   position: fixed;
   top: 0;
   left: 0;
-  width: 40px;
-  height: 40px;
-  background: var(--accent-purple);
+  width: 20px;
+  height: 20px;
+  background: var(--accent);
   border-radius: 50%;
-  /* Circle for editorial contrast */
-  mix-blend-mode: exclusion;
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  /* Classic exclusion */
+  transition: width 0.2s, height 0.2s, background-color 0.2s;
   display: none;
 }
 
 .cursor-bg {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 60vw;
-  height: 60vw;
-  background: radial-gradient(circle, var(--accent-purple) 0%, transparent 70%);
-  opacity: 0.1;
-  filter: blur(120px);
-  pointer-events: none;
-  z-index: -1;
-  transform: translate(-50%, -50%);
-  transition: transform 0.1s;
+  display: none;
+  /* Remove the blurry blob for cleanliness */
 }
 
 @media (pointer: fine) {
@@ -434,61 +433,26 @@ a {
 }
 
 /* ==========================================================================
-   GLITCH (Preserved)
-   ========================================================================== */
-.glitch {
-  position: relative;
-  display: inline-block;
-}
-
-.glitch::before,
-.glitch::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--bg);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  display: none;
-}
-
-.glitch:hover::before,
-.glitch:hover::after {
-  display: block;
-}
-
-/* (Animations kept simple for brevity - standard glitch keyframes assumed or reused) */
-
-/* ==========================================================================
    RESPONSIVE
    ========================================================================== */
 @media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    /* Use mobile menu logic present in HTML/JS */
+  }
+
   .hero-name {
-    font-size: 18vw;
+    font-size: 15vw;
   }
 
   .project-strip {
     flex-direction: column;
     align-items: flex-start;
+    gap: 1rem;
+    padding: 2rem 0;
   }
 
-  .nav-links {
-    display: none;
-    position: fixed;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background: var(--bg);
-    border-bottom: 3px solid var(--text);
-    flex-direction: column;
-    padding: 1rem;
+  .project-meta {
+    text-align: left;
   }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  /* Use JS toggle (not fully styled here for brevity but assumes JS works) */
 }

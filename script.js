@@ -1,5 +1,5 @@
 /**
- * BRUTALIST PORTFOLIO — LOGIC
+ * MODERN KINETIC PORTFOLIO — LOGIC
  * MOTION AS PRESENCE.
  */
 
@@ -62,13 +62,10 @@
       const targetId = href?.replace('#', '');
 
       if (targetId === activeId) {
-        link.style.textDecoration = 'underline';
-        link.style.background = 'var(--text)';
-        link.style.color = 'var(--bg)';
-      } else {
-        link.style.textDecoration = 'none';
-        link.style.background = 'transparent';
+        link.style.opacity = '1';
         link.style.color = 'var(--text)';
+      } else {
+        link.style.opacity = '0.6';
       }
     });
   }
@@ -95,8 +92,6 @@
       mouseY = e.clientY;
     });
 
-    const cursorBg = document.querySelector('.cursor-bg');
-
     function animateCursor() {
       // Linear interpolation for smooth trailing
       cursorX += (mouseX - cursorX) * lerp;
@@ -104,20 +99,13 @@
 
       cursor.style.transform = `translate(${cursorX}px, ${cursorY}px) translate(-50%, -50%)`;
 
-      // Move background element (Opposite direction, very subtle)
-      if (cursorBg) {
-        const moveX = (window.innerWidth / 2 - mouseX) * 0.05;
-        const moveY = (window.innerHeight / 2 - mouseY) * 0.05;
-        cursorBg.style.transform = `translate(calc(-50% + ${moveX}px), calc(-50% + ${moveY}px))`;
-      }
-
       requestAnimationFrame(animateCursor);
     }
 
     animateCursor();
 
     // -- MAGNETIC BUTTONS --
-    const magnets = document.querySelectorAll('.btn, .nav-link, .theme-toggle');
+    const magnets = document.querySelectorAll('.btn, .nav-link, .theme-toggle, .tool-icon');
 
     magnets.forEach((magnet) => {
       magnet.addEventListener('mousemove', (e) => {
@@ -127,24 +115,28 @@
         const y = e.clientY - rect.top - rect.height / 2;
 
         // Push button towards mouse (Magnetic attraction)
-        magnet.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+        // magnet.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
 
         // Expand cursor
-        cursor.style.transform = `translate(${cursorX}px, ${cursorY}px) translate(-50%, -50%) scale(1.5)`;
+        cursor.style.transform = `translate(${cursorX}px, ${cursorY}px) translate(-50%, -50%) scale(2)`;
+        cursor.style.background = 'var(--text)';
+        cursor.style.mixBlendMode = 'difference';
       });
 
       magnet.addEventListener('mouseleave', () => {
         // Reset button position
-        magnet.style.transform = `translate(0px, 0px)`;
+        // magnet.style.transform = `translate(0px, 0px)`;
         // Reset cursor scale
         cursor.style.transform = `translate(${cursorX}px, ${cursorY}px) translate(-50%, -50%) scale(1)`;
+        cursor.style.background = 'var(--accent)';
       });
     });
+
     // --- TEXT SCRAMBLE EFFECT ---
     class TextScramble {
       constructor(el) {
         this.el = el;
-        this.chars = '!<>-_\\/[]{}—=+*^?#________';
+        this.chars = '—_//[]{}'; // Cleaner, less chaotic chars
         this.update = this.update.bind(this);
       }
 
@@ -156,8 +148,8 @@
         for (let i = 0; i < length; i++) {
           const from = oldText[i] || '';
           const to = newText[i] || '';
-          const start = Math.floor(Math.random() * 40);
-          const end = start + Math.floor(Math.random() * 40);
+          const start = Math.floor(Math.random() * 20); // Faster
+          const end = start + Math.floor(Math.random() * 20); // Faster
           this.queue.push({ from, to, start, end });
         }
         cancelAnimationFrame(this.frameRequest);
@@ -205,21 +197,10 @@
     const el = document.querySelector('.hero-name');
     if (el) {
       const fx = new TextScramble(el);
-      let counter = 0;
 
-      const next = () => {
-        fx.setText(phrases[counter]).then(() => {
-          setTimeout(next, 2000); // Auto cycle for demo, or bind to hover
-        });
-        counter = (counter + 1) % phrases.length;
-      };
-
-      // Auto cycle name for kinetic feel
-      // next(); 
-
-      // Hover effect instead of auto-cycle
+      // Hover effect
       el.addEventListener('mouseenter', () => {
-        fx.setText('SYSTEM_BREACH');
+        fx.setText('CREATIVE DEVELOPER');
       });
       el.addEventListener('mouseleave', () => {
         fx.setText('TOM ISON');
@@ -233,7 +214,7 @@
     function textVelocity() {
       const currentScrollY = window.scrollY;
       const speed = currentScrollY - lastScrollY;
-      const skew = Math.min(Math.max(speed * 0.08, -4), 4); // Reduced intensity
+      const skew = Math.min(Math.max(speed * 0.05, -3), 3); // Even more subtle for professional look
 
       skewTargets.forEach(target => {
         target.style.transform = `skewX(${skew}deg)`;
@@ -253,20 +234,6 @@
       requestAnimationFrame(textVelocity);
     }
 
-    window.addEventListener('scroll', () => {
-      // textVelocity is called via RAF loop or just triggered here? 
-      // Better to just update vars here and have loop run, but for simplicity:
-      // We already have a RAF loop for cursor, but let's keep this separate or merged.
-      // Actually, let's just run it.
-    }, { passive: true });
-
-    // Start the loop
-    function loop() {
-      textVelocity();
-      // requestAnimationFrame(loop); // recursive loop is better for smooth motion
-    }
-    // Initialize loop
-    // Note: textVelocity calls requestAnimationFrame(textVelocity) at the end, so we just need to start it once.
     requestAnimationFrame(textVelocity);
   }
 
