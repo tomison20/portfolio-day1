@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOM // PORTFOLIO</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    (function () { var t = localStorage.getItem('portfolio-theme') || (window.matchMedia('(prefers-color-scheme:light)').matches ? 'light' : 'dark'); document.documentElement.setAttribute('data-theme', t); })();
+  </script>
+</head>
+
+<body>
+  <div class="cursor-bg"></div>
+  <div class="cursor"></div>
+
+  <nav class="nav">
+    <a href="#" class="nav-logo">TOM.</a>
+    <button class="nav-toggle" aria-label="Menu"
+      style="border:none; background:none; font-weight:900; font-size:1.5rem;">[+]</button>
+    <ul class="nav-links">
+      <li><a href="#work" class="nav-link">Work</a></li>
+      <li><a href="#about" class="nav-link">Studio</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+      <li><button class="theme-toggle" aria-label="Theme"
+          style="border:none; background:none; font-weight:bold; cursor:pointer;">(◐)</button></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- HERO SECTION: POSTER HEADER -->
+    <header class="hero">
+      <div class="hero-bg-text">DESIGN ENGINEER</div>
+      <div class="hero-main">
+        <span class="hero-hi">HELLO_WORLD</span>
+        <h1 class="hero-name glitch" data-text="TOM ISON">TOM ISON</h1>
+        <div class="hero-role">Creative Developer</div>
+      </div>
+      <!-- Graphic Line -->
+      <div class="graphic-line"></div>
+    </header>
+
+    <!-- WORK SECTION: MAGAZINE STRIPS -->
+    <section id="work" class="poster-grid" style="display:block; margin-bottom: 8rem;">
+      <h2 class="section-header">SELECTED_WORKS (03)</h2>
+
+      <article class="project-strip">
+        <div class="project-hover-reveal"></div>
+        <h3>01 // NEON_SYS</h3>
+        <div class="project-meta">
+          <p>REACT / THREE.JS</p>
+          <span>2024</span>
+        </div>
+      </article>
+
+      <article class="project-strip">
+        <div class="project-hover-reveal"></div>
+        <h3>02 // ARCHIVE_X</h3>
+        <div class="project-meta">
+          <p>NEXT.JS / REDIS</p>
+          <span>2023</span>
+        </div>
+      </article>
+
+      <article class="project-strip">
+        <div class="project-hover-reveal"></div>
+        <h3>03 // VOID_TYPE</h3>
+        <div class="project-meta">
+          <p>WEBGL / GLSL</p>
+          <span>2025</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- ABOUT SECTION: ASYMMETRICAL BLOCK -->
+    <section id="about" class="poster-grid">
+      <div class="block-red"
+        style="grid-column: 1 / 6; padding: 2rem; min-height: 400px; display:flex; align-items:center;">
+        <h2 style="font-size: 4rem; color: var(--text);">STUDIO<br>PRACTICE</h2>
+      </div>
+      <div style="grid-column: 7 / -1; display: flex; flex-direction: column; justify-content: flex-end;">
+        <p class="text-huge" style="font-size: 1.5rem; font-weight: bold;">
+          I build digital interfaces that refuse to be ignored. Focusing on raw interaction, structural typography, and
+          performant code.
+        </p>
+        <div class="graphic-line"></div>
+        <div class="skills-block">
+          <span class="skill-pill">JAVASCRIPT</span>
+          <span class="skill-pill">REACT</span>
+          <span class="skill-pill">GLSL</span>
+          <span class="skill-pill">NODE</span>
+          <span class="skill-pill">DESIGN</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT: FOOTER -->
+    <footer id="contact" style="background: var(--text); color: var(--bg); padding: 4rem; margin-top: 8rem;">
+      <h2 class="glitch" data-text="GET IN TOUCH" style="color: var(--bg); font-size: clamp(3rem, 10vw, 8rem);">GET IN
+        TOUCH</h2>
+      <div style="margin-top: 2rem; display: flex; gap: 2rem; flex-wrap: wrap;">
+        <a href="mailto:tom@example.com" class="nav-link"
+          style="color: var(--accent-orange); border-color: var(--accent-orange);">EMAIL</a>
+        <a href="#" class="nav-link" style="color: var(--accent-blue); border-color: var(--accent-blue);">GITHUB</a>
+        <a href="#" class="nav-link" style="color: var(--bg); border-color: var(--bg);">LINKEDIN</a>
+      </div>
+      <p style="margin-top: 4rem; opacity: 0.5; font-size: 0.8rem;">© 2026 TOM ISON. BRUTALIST EDITION.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
