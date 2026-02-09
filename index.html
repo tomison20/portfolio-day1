@@ -29,24 +29,33 @@
   </nav>
 
   <main>
-    <!-- HERO SECTION: POSTER HEADER -->
+    <!-- HERO SECTION: CYBER POSTER -->
     <header class="hero">
-      <div class="hero-bg-text">DESIGN ENGINEER</div>
+      <div class="hero-bg-text-container">
+        <div class="hero-bg-text" style="-webkit-text-stroke: 1px var(--border);">SYSTEM_READY SYSTEM_READY SYSTEM_READY
+          SYSTEM_READY</div>
+        <div class="hero-bg-text" style="-webkit-text-stroke: 1px var(--border);">SYSTEM_READY SYSTEM_READY SYSTEM_READY
+          SYSTEM_READY</div>
+      </div>
       <div class="hero-main">
-        <span class="hero-hi">HELLO_WORLD</span>
+
         <h1 class="hero-name glitch" data-text="TOM ISON">TOM ISON</h1>
-        <div class="hero-role">Creative Developer</div>
+        <div class="hero-role"
+          style="border-color:var(--accent-purple); color:var(--accent-purple); background:transparent;">Creative Eng.
+        </div>
       </div>
       <!-- Graphic Line -->
       <div class="graphic-line"></div>
     </header>
 
-    <!-- WORK SECTION: MAGAZINE STRIPS -->
+    <!-- WORK SECTION: MAG STRIPS -->
     <section id="work" class="poster-grid" style="display:block; margin-bottom: 8rem;">
-      <h2 class="section-header">SELECTED_WORKS (03)</h2>
+      <h2 class="section-header" style="border-color:var(--border);">DEPLOYMENTS (03)</h2>
 
-      <article class="project-strip">
-        <div class="project-hover-reveal"></div>
+      <article class="project-strip" style="border-color:var(--border);">
+        <div class="project-hover-reveal"
+          style="background: repeating-linear-gradient(45deg, var(--accent-green), var(--accent-green) 2px, transparent 2px, transparent 10px);">
+        </div>
         <h3>01 // NEON_SYS</h3>
         <div class="project-meta">
           <p>REACT / THREE.JS</p>
@@ -54,8 +63,10 @@
         </div>
       </article>
 
-      <article class="project-strip">
-        <div class="project-hover-reveal"></div>
+      <article class="project-strip" style="border-color:var(--border);">
+        <div class="project-hover-reveal"
+          style="background: repeating-linear-gradient(45deg, var(--accent-purple), var(--accent-purple) 2px, transparent 2px, transparent 10px);">
+        </div>
         <h3>02 // ARCHIVE_X</h3>
         <div class="project-meta">
           <p>NEXT.JS / REDIS</p>
@@ -63,8 +74,10 @@
         </div>
       </article>
 
-      <article class="project-strip">
-        <div class="project-hover-reveal"></div>
+      <article class="project-strip" style="border-color:var(--border);">
+        <div class="project-hover-reveal"
+          style="background: repeating-linear-gradient(45deg, #fff, #fff 2px, transparent 2px, transparent 10px);">
+        </div>
         <h3>03 // VOID_TYPE</h3>
         <div class="project-meta">
           <p>WEBGL / GLSL</p>
@@ -73,39 +86,76 @@
       </article>
     </section>
 
-    <!-- ABOUT SECTION: ASYMMETRICAL BLOCK -->
+    <!-- ABOUT SECTION: ACID GRID -->
     <section id="about" class="poster-grid">
-      <div class="block-red"
-        style="grid-column: 1 / 6; padding: 2rem; min-height: 400px; display:flex; align-items:center;">
-        <h2 style="font-size: 4rem; color: var(--text);">STUDIO<br>PRACTICE</h2>
+      <div class="block-green"
+        style="grid-column: 1 / 6; padding: 2rem; min-height: 400px; display:flex; align-items:center; position:relative; overflow:hidden;">
+        <h2 style="font-size: 4rem; color: #000; z-index:2;">STUDIO<br>TOOLSET</h2>
+        <div style="position:absolute; bottom:-20px; right:-20px; font-size:10rem; opacity:0.2; font-weight:900;">🛠
+        </div>
       </div>
       <div style="grid-column: 7 / -1; display: flex; flex-direction: column; justify-content: flex-end;">
-        <p class="text-huge" style="font-size: 1.5rem; font-weight: bold;">
+        <p class="text-huge" style="font-size: 1.5rem; font-weight: bold; color: var(--text);">
           I build digital interfaces that refuse to be ignored. Focusing on raw interaction, structural typography, and
-          performant code.
+          tool-agnostic problem solving.
         </p>
         <div class="graphic-line"></div>
-        <div class="skills-block">
-          <span class="skill-pill">JAVASCRIPT</span>
-          <span class="skill-pill">REACT</span>
-          <span class="skill-pill">GLSL</span>
-          <span class="skill-pill">NODE</span>
-          <span class="skill-pill">DESIGN</span>
+
+        <!-- TOOL ICONS -->
+        <h3 style="font-size: 1.2rem; color: var(--accent-gray); margin-bottom: 1rem;">// PRIMARY_STACK</h3>
+        <div class="tool-grid">
+          <!-- VS Code -->
+          <div class="tool-icon" title="VS Code">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M23.5 18c0 .8-.7 1.5-1.5 1.5H2c-.8 0-1.5-.7-1.5-1.5V6c0-.8.7-1.5 1.5-1.5h20c.8 0 1.5.7 1.5 1.5v12zm-2 0V6H2.5v12h19z" />
+            </svg>
+          </div>
+          <!-- Figma -->
+          <div class="tool-icon" title="Figma">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2C8.7 2 6 4.7 6 8s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zm0 12c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6z" />
+            </svg>
+          </div>
+          <!-- Git -->
+          <div class="tool-icon" title="Git">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z" />
+            </svg>
+          </div>
+          <!-- React -->
+          <div class="tool-icon" title="React">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="2" />
+              <path
+                d="M12 4.5C7.9 4.5 4.5 7.9 4.5 12s3.4 7.5 7.5 7.5 7.5-3.4 7.5-7.5-3.4-7.5-7.5-7.5zm0 13c-3 0-5.5-2.5-5.5-5.5S9 6.5 12 6.5s5.5 2.5 5.5 5.5-2.5 5.5-5.5 5.5z" />
+            </svg>
+          </div>
+          <!-- Node -->
+          <div class="tool-icon" title="Node">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.2L12 8.5 9.5 9.8 12 11zm0 2.2l-5-2.5L2 13v5l10 5 10-5v-5l-5 2.5-5 2.5z" />
+            </svg>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- CONTACT: FOOTER -->
-    <footer id="contact" style="background: var(--text); color: var(--bg); padding: 4rem; margin-top: 8rem;">
-      <h2 class="glitch" data-text="GET IN TOUCH" style="color: var(--bg); font-size: clamp(3rem, 10vw, 8rem);">GET IN
-        TOUCH</h2>
+    <footer id="contact"
+      style="background: var(--border); color: var(--text); padding: 4rem; margin-top: 8rem; border-top: 2px solid var(--accent-purple);">
+      <h2 class="glitch" data-text="HELLO @ TOM"
+        style="color: var(--accent-green); font-size: clamp(3rem, 10vw, 8rem);">HELLO @ TOM</h2>
       <div style="margin-top: 2rem; display: flex; gap: 2rem; flex-wrap: wrap;">
         <a href="mailto:tom@example.com" class="nav-link"
-          style="color: var(--accent-orange); border-color: var(--accent-orange);">EMAIL</a>
-        <a href="#" class="nav-link" style="color: var(--accent-blue); border-color: var(--accent-blue);">GITHUB</a>
-        <a href="#" class="nav-link" style="color: var(--bg); border-color: var(--bg);">LINKEDIN</a>
+          style="color: var(--text); border-color: var(--accent-green);">EMAIL</a>
+        <a href="#" class="nav-link" style="color: var(--text); border-color: var(--accent-purple);">GITHUB</a>
       </div>
-      <p style="margin-top: 4rem; opacity: 0.5; font-size: 0.8rem;">© 2026 TOM ISON. BRUTALIST EDITION.</p>
+      <p style="margin-top: 4rem; opacity: 0.5; font-size: 0.8rem; font-family:var(--font-mono);">© 2026 TOM ISON. ACID
+        EDITION.</p>
     </footer>
   </main>
 
