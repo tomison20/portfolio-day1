@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TOM ISON // ENGINEER</title>
+  <title>TOM inte portfolio</title>
   <link rel="stylesheet" href="styles.css">
   <script>
     (function () { var t = localStorage.getItem('portfolio-theme') || (window.matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light'); document.documentElement.setAttribute('data-theme', t); })();
@@ -31,8 +31,8 @@
     <!-- HERO SECTION: KINETIC SWISS -->
     <header class="hero">
       <div class="hero-bg-text-container">
-        <div class="hero-bg-text">SYSTEM_READY SYSTEM_READY SYSTEM_READY SYSTEM_READY</div>
-        <div class="hero-bg-text">SYSTEM_READY SYSTEM_READY SYSTEM_READY SYSTEM_READY</div>
+        <div class="hero-bg-text">DAMN THIS MOVEMENT IS COOL</div>
+        <div class="hero-bg-text">DAMN THIS MOVEMENT IS COOL</div>
       </div>
 
       <div class="hero-main">
@@ -47,7 +47,7 @@
 
       <!-- WORK SECTION: CLEAN LIST -->
       <section id="work" class="poster-grid">
-        <h2 class="section-header">SELECTED WORK (03)</h2>
+        <h2 class="section-header">WORKS</h2>
 
         <article class="project-strip">
           <div class="project-left">
@@ -98,46 +98,98 @@
 
         <div style="grid-column: 8 / -1;">
           <h3
-            style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.1em;">
-            Primary Stack</h3>
-          <div class="tool-grid">
-            <!-- Icons (SVG) - Clean -->
-            <!-- VS Code -->
-            <div class="tool-icon" title="VS Code">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M23.5 18c0 .8-.7 1.5-1.5 1.5H2c-.8 0-1.5-.7-1.5-1.5V6c0-.8.7-1.5 1.5-1.5h20c.8 0 1.5.7 1.5 1.5v12zm-2 0V6H2.5v12h19z" />
-              </svg>
+            style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 0.1em; border-bottom: 1px solid var(--border); padding-bottom: 1rem; display: inline-block;">
+            Technical Specifications
+          </h3>
+
+          <div class="tech-grid">
+
+            <!-- REACT -->
+            <div class="tech-card" style="--brand: #61DAFB;">
+              <div class="tech-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 0C5.373 0 0 5.373 0 12c0 6.627 5.373 12 12 12s12-5.373 12-12C24 5.373 18.627 0 12 0zm0 2.2c5.41 0 9.8 4.39 9.8 9.8s-4.39 9.8-9.8 9.8-9.8-4.39-9.8-9.8 4.39-9.8 9.8-9.8zm0 4.3c-3.03 0-5.5 2.47-5.5 5.5s2.47 5.5 5.5 5.5 5.5-2.47 5.5-5.5-2.47-5.5-5.5-5.5zm0 2.5c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z" />
+                  <!-- React Atom simplified for readability in small sizes -->
+                  <circle cx="12" cy="12" r="2.5" />
+                  <ellipse cx="12" cy="12" rx="10" ry="4.5" fill="none" stroke="currentColor" stroke-width="1.5"
+                    transform="rotate(0 12 12)" />
+                  <ellipse cx="12" cy="12" rx="10" ry="4.5" fill="none" stroke="currentColor" stroke-width="1.5"
+                    transform="rotate(60 12 12)" />
+                  <ellipse cx="12" cy="12" rx="10" ry="4.5" fill="none" stroke="currentColor" stroke-width="1.5"
+                    transform="rotate(120 12 12)" />
+                </svg>
+              </div>
+              <span class="tech-name">REACT</span>
+              <span class="tech-role">Frontend Env</span>
             </div>
-            <!-- Figma -->
-            <div class="tool-icon" title="Figma">
-              <svg viewBox="0 0 32 32" fill="currentColor">
-                <path
-                  d="M12 2C8.7 2 6 4.7 6 8s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zm0 12c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6z" />
-              </svg>
+
+            <!-- NODE -->
+            <div class="tech-card" style="--brand: #339933;">
+              <div class="tech-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0L1.6 6v12L12 24l10.4-6V6L12 0zm-1 15h2v2h-2v-2zm0-8h2v6h-2V7z" />
+                  <!-- Node simplified hex -->
+                  <path d="M12 2l9 5v10l-9 5-9-5V7l9-5z M11 17h2v-6h-2v6z" fill-rule="evenodd" />
+                </svg>
+              </div>
+              <span class="tech-name">NODE.JS</span>
+              <span class="tech-role">Runtime</span>
             </div>
-            <!-- Git -->
-            <div class="tool-icon" title="Git">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z" />
-              </svg>
+
+            <!-- GIT -->
+            <div class="tech-card" style="--brand: #F05032;">
+              <div class="tech-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M20.3 12.8 11.2 3.7c-.5-.5-1.3-.5-1.8 0L2.7 10.4c-.5.5-.5 1.3 0 1.8l9.1 9.1c.5.5 1.3.5 1.8 0l6.7-6.7c.5-.5.5-1.3 0-1.8zM10 16c-1.1 0-2-.9-2-2 0-.3.1-.6.2-.8L7 11.4c-.2.1-.5.2-.8.2-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2c0 .3-.1.6-.2.8l1.2 1.8c.2-.1.5-.2.8-.2 1.1 0 2 .9 2 2s-.9 2-2 2z" />
+                </svg>
+              </div>
+              <span class="tech-name">GIT</span>
+              <span class="tech-role">Version Ctrl</span>
             </div>
-            <!-- React -->
-            <div class="tool-icon" title="React">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <circle cx="12" cy="12" r="2" />
-                <path
-                  d="M12 4.5C7.9 4.5 4.5 7.9 4.5 12s3.4 7.5 7.5 7.5 7.5-3.4 7.5-7.5-3.4-7.5-7.5-7.5zm0 13c-3 0-5.5-2.5-5.5-5.5S9 6.5 12 6.5s5.5 2.5 5.5 5.5-2.5 5.5-5.5 5.5z" />
-              </svg>
+
+            <!-- DOCKER -->
+            <div class="tech-card" style="--brand: #2496ED;">
+              <div class="tech-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.184-.186h-2.12a.186.186 0 00-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.082.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 00-.75.748 11.376 11.376 0 00.692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.248 12.248 0 003.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z" />
+                </svg>
+              </div>
+              <span class="tech-name">DOCKER</span>
+              <span class="tech-role">Containers</span>
             </div>
-            <!-- Node -->
-            <div class="tool-icon" title="Node">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.2L12 8.5 9.5 9.8 12 11zm0 2.2l-5-2.5L2 13v5l10 5 10-5v-5l-5 2.5-5 2.5z" />
-              </svg>
+
+            <!-- AWS -->
+            <div class="tech-card" style="--brand: #FF9900;">
+              <div class="tech-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <!-- Cloud Icon for AWS -->
+                  <path d="M18.42 9.06a7 7 0 0 0-13.36 1.44A6 6 0 0 0 6 22h12a6 6 0 0 0 .42-11.94z" />
+                </svg>
+              </div>
+              <span class="tech-name">AWS</span>
+              <span class="tech-role">Cloud Infra</span>
             </div>
+
+            <!-- FIGMA -->
+            <div class="tech-card" style="--brand: #F24E1E;">
+              <div class="tech-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <!-- Figma Shape -->
+                  <path
+                    d="M12 2C8.7 2 6 4.7 6 8s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zm0 12c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6z"
+                    transform="translate(-4, -4) scale(1.3)" />
+                  <circle cx="12" cy="7" r="3.5" />
+                  <circle cx="12" cy="17" r="3.5" />
+                  <circle cx="7" cy="12" r="3.5" />
+                </svg>
+              </div>
+              <span class="tech-name">FIGMA</span>
+              <span class="tech-role">Design Sys</span>
+            </div>
+
           </div>
         </div>
       </section>
@@ -145,17 +197,17 @@
       <div class="graphic-line"></div>
 
       <!-- CONTACT: FOOTER -->
-      <footer id="contact"
-        style="padding: 4rem 0; display:flex; justify-content: space-between; align-items: flex-end;">
-        <div>
-          <h2 class="hero-name" style="font-size: 3rem; margin-bottom: 0;">LET'S BUILD</h2>
-          <a href="mailto:tom.ison.ti@gmail.com"
-            style="font-size: 1.5rem; color: var(--accent); border-bottom: 1px solid var(--accent);">tom.ison.ti@gmail.com</a>
+      <!-- CONTACT: FOOTER -->
+      <footer id="contact" class="footer">
+        <div class="footer-content">
+          <h2 class="footer-cta">LET'S BUILD</h2>
+          <a href="mailto:tom.ison.ti@gmail.com" class="footer-email">tom.ison.ti@gmail.com</a>
         </div>
-        <div style="text-align: right; opacity: 0.5; font-family:var(--font-mono); font-size: 0.8rem;">
-          <p>© 2026 TOM ISON</p>
+        <div class="footer-meta">
+          <p class="footer-copy">© 2026 TOM ISON</p>
         </div>
       </footer>
+
     </div>
   </main>
 
